@@ -13,18 +13,20 @@
   <% end %>
 
 <div class="ui form">
-  <div class="field">
+  <div class="required field">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="required field">
     <%= f.label :types %>
+    <i>Separate types with commas.</i><br>
     <%= f.text_field :types %>
   </div>
 
-  <div class="field">
+  <div class="required field">
     <%= f.label :abilities %>
+    <i>Separate abilities with commas.</i><br>
     <%= f.text_field :abilities %>
   </div>
 
