@@ -1,0 +1,47 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<div class="ui message">
+  <!-- <div class="header">Notice!</div> -->
+  <%= notice %>
+</div>
+
+<br>
+<div class="ui raised padded text inverted container segment">
+  <h1 class="ui header">Pokémon Pokédex</h1>
+  <p id="description">The Pokédex section has a wealth of information on all the Pokémon creatures from the entire game series. On the main list pages you can see the various stats of each Pokémon. Click a Pokémon's name to see a detailed page with Pokédex data, descriptions from previous games, sprites, evolutions, moves and more!</p> 
+</div>
+
+<br><br>
+<div class="ui three column doubling stackable grid container">
+  <% @pokemons.each do |pokemon| %>
+  <div class="column">
+    <div class="ui card">
+        <div class="content">
+
+            <div class="header"><%= link_to pokemon.name, pokemon %></div>
+
+            <div class="ui hidden divider">Type/s</div>
+              <%= pokemon.types %>
+
+            <div class="ui hidden divider">Abilities</div>
+              <%= pokemon.abilities %>
+
+            <div class="ui hidden divider">Description</div>
+              <%= pokemon.description %>
+        
+        </div>
+
+        <div class="extra content">
+            <button class="tiny positive ui button"><%= link_to 'Edit', edit_pokemon_path(pokemon) %></button>
+            <button class="tiny negative ui button"><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br><br>
+<button class="ui black button">
+  <%= link_to 'New Pokemon', new_pokemon_path %><br>
+</button>

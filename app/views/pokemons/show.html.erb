@@ -1,0 +1,51 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<div class="ui message">
+  <!-- <div class="header">Notice!</div> -->
+  <%= notice %>
+</div>
+
+
+<!--<div id="show">
+  <strong>Name:</strong>
+  <%= @pokemon.name %><br><br>
+
+  <strong>Type/s:</strong>
+  <%= @pokemon.types %><br><br>
+
+  <strong>Abilities:</strong>
+  <%= @pokemon.abilities %><br><br>
+
+  <strong>Description:</strong>
+  <%= @pokemon.description %><br><br>
+</div>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>
+-->
+<center>
+	
+<div class="ui card">
+        <div class="content">
+
+            <div class="header"><%= @pokemon.name %></div>
+
+            <div class="ui hidden divider">Type/s</div>
+              <%= @pokemon.types %>
+
+            <div class="ui hidden divider">Abilities</div>
+              <%= @pokemon.abilities %>
+
+            <div class="ui hidden divider">Description</div>
+              <%= @pokemon.description %>
+        
+        </div>
+
+        <div class="extra content">
+			<button class="tiny ui button"><%= link_to 'Back', pokemons_path %></button>
+            <button class="tiny positive ui button"><%= link_to 'Edit', edit_pokemon_path(@pokemon) %></button>
+            <button class="tiny negative ui button"><%= link_to 'Destroy', @pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+
+</div>
+</center>
