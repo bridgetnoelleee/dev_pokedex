@@ -5,6 +5,7 @@
 }
 
 #description {
+	text-align: justify-all;
 	font-size: 14px;
 	padding-top: 50px;
 	position: relative;
@@ -24,12 +25,8 @@
 #background {
 	/*background-color: lightblue;*/
 	text-align: center;
-}
+}		
 
 #index {
 	height: 100vh;
-}
-
-.field {
-	/*font-weight: bold;*/
 }

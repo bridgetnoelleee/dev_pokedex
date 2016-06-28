@@ -35,8 +35,14 @@
         </div>
 
         <div class="extra content">
-            <button class="tiny positive ui button"><%= link_to 'Edit', edit_pokemon_path(pokemon) %></button>
-            <button class="tiny negative ui button"><%= link_to 'Delete', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            <button class="tiny positive ui button">
+              <!-- Edit -->
+              <%= link_to 'Edit', edit_pokemon_path(pokemon), :style => "color: #fff !important" %>
+              </button>
+            <button class="tiny negative ui button">
+              <!-- Delete -->
+              <%= link_to 'Delete', pokemon, method: :delete, data: { confirm: 'Are you sure?' }, :style => "color: #fff !important" %>
+            </button>
         </div>
 
     </div>
