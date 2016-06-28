@@ -5,9 +5,9 @@
 </div>
 
 <center>
-<div class="ui card">
+<div class="ui raised padded text container segment">
         <div class="content">
-            <div class="header"><%= @pokemon.name %></div>
+            <h1 class="ui black inverted segment header"><%= @pokemon.name %></h1>
             <div class="ui hidden divider">Type/s</div>
               <%= @pokemon.types %>
             <div class="ui hidden divider">Abilities</div>
@@ -16,14 +16,17 @@
               <%= @pokemon.description %>
         </div>
 
+		<div class="ui hidden divider"></div>
+
         <div class="extra content">
 			<button class="tiny ui button"><%= link_to 'Back', pokemons_path %></button>
             <button class="tiny positive ui button"><%= link_to 'Edit', edit_pokemon_path(@pokemon) %></button>
             <button class="tiny negative ui button"><%= link_to 'Delete', @pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </div>
 
+		<div class="ui mini hidden divider">Share this Pokemon!</div>
+
         <div class="extra content">
-        	Share this Pokemon!<br>
 			<button class="ui circular facebook icon button">
 			  <i class="facebook icon"></i>
 			</button>
@@ -38,5 +41,8 @@
 			</button>
         </div>
 
+
 </div>
 </center>
+<div class="ui massive hidden divider"></div>
+<%= render 'footer' %>

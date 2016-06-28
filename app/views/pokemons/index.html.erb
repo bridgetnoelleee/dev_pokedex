@@ -1,31 +1,25 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
+<div class="ui very padded inverted vertical masthead center aligned segment" id="index">
+
+<h1 class="ui hidden divider header" id="header">Pokémon Pokédex</h1>
+<div class="ui hidden divider"></div>
+<div class="ui text container" id="description">
+  <p>The Pokédex section has a wealth of information on all the Pokémon creatures from the entire game series. On the main list pages you can see the various stats of each Pokémon. Click a Pokémon's name to see a detailed page with Pokédex data, descriptions from previous games, sprites, evolutions, moves and more!</p>
+
+  <p>Lorem ipsum keme keme keme 48 years ang bigalou at bakit wiz biway sa ang at nang at ang jutay mahogany 48 years shogal nang ganda lang majonders shogal kabog tungril ugmas borta at bakit tungril kasi lorem ipsum keme keme pamin mabaho lorem ipsum keme keme.</p> 
+</div>
+
+<div class="ui hidden divider"></div>
+<div class="ui medium button"><%= link_to 'New Pokemon', new_pokemon_path %></div>
+</div>
+
 <div class="ui message">
   <!-- <div class="header">Notice!</div> -->
   <%= notice %>
 </div>
 
-<br>
-<div class="pusher">
-  <div class="ui very padded inverted vertical masthead center aligned segment">
-
-  <div class="ui text container">
-  <h1 class="ui inverted">Pokémon Pokédex</h1>
-  <p id="description">The Pokédex section has a wealth of information on all the Pokémon creatures from the entire game series. On the main list pages you can see the various stats of each Pokémon. Click a Pokémon's name to see a detailed page with Pokédex data, descriptions from previous games, sprites, evolutions, moves and more!</p>
-
-  <p id="description">Lorem ipsum keme keme keme 48 years ang bigalou at bakit wiz biway sa ang at nang at ang jutay mahogany 48 years shogal nang ganda lang majonders shogal kabog tungril ugmas borta at bakit tungril kasi lorem ipsum keme keme pamin mabaho lorem ipsum keme keme.</p> 
-  </div>
-
-      <br>
-      <button class="ui tiny gray button">
-      <%= link_to 'New Pokemon', new_pokemon_path %><br>
-      </button>      
-    </div>
-    </div>
-</div>
-</div>
-
-<br><br>
+  <br><br>
 <div class="ui three column doubling stackable grid container">
   <% @pokemons.each do |pokemon| %>
   <div class="column">
@@ -48,6 +42,8 @@
     </div>
   </div>
   <% end %>
+
 </div>
 
 <br><br>
+<%= render 'footer' %>
